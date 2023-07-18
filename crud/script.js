@@ -1,4 +1,4 @@
-// CRUD///////////
+////////////////CRUD/////////////////
 let users = [
     {id:1, year: 1998, engine: 1, name: "Tico"},
     {id:2, year: 2005, engine: 1.2, name: "Matiz"},
@@ -8,14 +8,14 @@ let users = [
     {id:6, year: 2000, engine: 1.2, name: "Damas"},
     {id:7, year: 2018, engine: 2.4, name: "Tracker"},
 ];
-////////////Create///////////////
+/////////////////Create///////////////
 let newUser = (user) => {
     users.push(user);
 }
 newUser({id:0, year: 2022, engine: 2.8, name: "Cobolt2"});
 console.log(users);
 
-/////////////Read/////////////////
+//////////////////Read/////////////////
 // sorting number
 
 let sorting1 = () => {
@@ -29,7 +29,7 @@ let sortingName = () => {
 }
 console.log(sortingName());
 
-// //////////Update////////////
+////////////////Update////////////
 let update = (upd) => {
     return users.map((obj) => {
         return obj.id === upd.id ? {...obj, [upd.key]: upd.value} : obj;
@@ -37,7 +37,7 @@ let update = (upd) => {
 };
 console.log(update({id: 1, key: "name", value: "Nexia"}));
 
-// ////////////Delete//////////////////
+/////////////////Delete//////////////////
 
 let onDelete = ({id, year, engine, name}) => {
     return users.filter((obj) => {
